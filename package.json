@@ -1,0 +1,14 @@
+{
+  "name": "cities-visualizer",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "concurrently": "^3.4.0"
+  },
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run front\"",
+    "server": "cd server && npm run start",
+    "front": "cd front && npm run start",
+    "install-projects": "npm install && cd front && npm install cd ../server && npm install"
+  }
+}
