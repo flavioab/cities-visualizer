@@ -21,7 +21,7 @@
     "supertest": "^1.0.0"
   },
   "scripts": {
-    "start": "babel-node api/app.js",
+    "start": "nodemon api/app.js --exec babel-node",
     "build": "babel api --out-dir dist --copy-files",
     "serve": "node dist/app.js",
     "test": "npm run build && mocha ./dist/test/**/*.js"
