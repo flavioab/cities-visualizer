@@ -31,7 +31,9 @@ describe('controllers', function() {
                     .expect(200)
                     .end(function(err, res) {
                         should.not.exist(err);
-                        res.body.length.should.eql(8);
+                        res.body.items.length.should.eql(8);
+                        res.body.total.should.eql(100);
+                        res.body.page.should.eql(1);
                         done();
                     });
             });
@@ -46,7 +48,9 @@ describe('controllers', function() {
                     .expect(200)
                     .end(function(err, res) {
                         should.not.exist(err);
-                        res.body.length.should.eql(8);
+                        res.body.items.length.should.eql(8);
+                        res.body.total.should.eql(100);
+                        res.body.page.should.eql(2);
                         done();
                     });
             });
