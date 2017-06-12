@@ -6,11 +6,15 @@
   "dependencies": {
     "books-api": "file:../server",
     "cd": "^0.3.3",
+    "external-editor": "^2.0.4",
+    "is-promise": "^2.1.0",
+    "mimic-fn": "^1.1.0",
     "pubsub-js": "^1.5.7",
     "purecss": "^1.0.0",
     "react": "^15.5.4",
     "react-autocomplete": "^1.5.6",
-    "react-dom": "^15.5.4"
+    "react-dom": "^15.5.4",
+    "superagent": "^3.5.2"
   },
   "devDependencies": {
     "react-scripts": "1.0.7"
