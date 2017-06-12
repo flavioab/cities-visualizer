@@ -46,7 +46,7 @@ paths:
         "200":
           description: Success
           schema:
-            $ref: "#/definitions/WebeserviceResponse"
+            $ref: "#/definitions/WebeserviceResponsePaginated"
         # responses may fall through to errors
         default:
           description: Error
@@ -64,6 +64,19 @@ definitions:
         type: array
         items:
           type: string
+  WebeserviceResponsePaginated:
+    properties:
+      data:
+        type: object
+        properties:
+          items:
+            type: array
+            items:
+              type: string
+          page:
+            type: integer
+          total:
+            type: integer
   ErrorResponse:
     required:
       - message

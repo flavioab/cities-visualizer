@@ -33,8 +33,14 @@ export default class Client {
             .then(xml => xml.replace(/&lt;/g, '<'))
             .then(xml => xml.replace(/&gt;/g, '>'))
             .then(xml => parse(xml).root.children)
-            .then(items => items.slice((page-1)*8, (page)*8))
-            .then(items => items.map(item => item.children[1].content))
+            .then(items => {
+                let data = {};
+                data.items = items.slice((page-1)*8, (page)*8)
+                    .map(item => item.children[1].content);
+                data.total = items.length;
+                data.page = page;
+                return data;
+            })
             .then(callback)
             .catch((err) => console.log(err));
     }
