@@ -8,8 +8,11 @@
   "license": "",
   "main": "app.js",
   "dependencies": {
+    "cxml": "^0.1.1",
     "express": "^4.12.3",
-    "swagger-express-mw": "^0.1.0"
+    "node-fetch": "^1.7.1",
+    "swagger-express-mw": "^0.1.0",
+    "xml-parser": "^1.2.1"
   },
   "devDependencies": {
     "babel-cli": "^6.24.0",
